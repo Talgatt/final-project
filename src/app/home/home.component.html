@@ -1,0 +1,36 @@
+ <div>
+   <div class="searching">
+
+     <form clrForm>
+       <input clrInput placeholder="My input" name="search" [(ngModel)]="_api.search" />
+       <button class="btn btn-outline" (click)="onClick()">Search</button>
+     </form>
+
+     <!-- <div class="searchResults">
+       <li *ngFor="let result of this.movies.results">
+         <p><strong>{{result.title}}</strong></p>
+         <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}">
+       </li>
+     </div> -->
+     <!-- <li *ngFor="let result of this.movies.results"> -->
+     <div class="clr-col-lg-4 clr-col-12">
+        <li *ngFor="let result of this.movies.results">
+        <a href="..." class="card clickable">
+            <div class="card-block">
+                <p class="card-text">
+                    ...
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/>
+            </div>
+            <div class="card-block">
+                <p class="card-text">
+                  Title: <strong>{{result.title}}</strong>
+                </p>
+            </div>
+        </a>
+        </li>
+    </div>
+   </div>
+ </div>

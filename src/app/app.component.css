@@ -1,0 +1,15 @@
+.buttonSidenav {
+    width: 70px;
+
+}
+.sidenav{
+    display: inline-block;
+}
+.headernav{
+    display: flex;
+}
+.linksmenu{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
