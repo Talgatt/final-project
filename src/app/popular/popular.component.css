@@ -1,11 +1,12 @@
-#cards{
+.cards {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    height: 300px;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    height: 200px;
     width: auto;
 }
-/* img{
-    height: 300px;
+img{
+    height: 500px;
     width: auto;
-} */
+}
