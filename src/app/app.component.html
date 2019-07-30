@@ -41,18 +41,21 @@
 <app-header></app-header>
 
 <router-outlet></router-outlet>
-
- <ngb-carousel *ngIf="movies">
-   <div *ngFor="let result of this.movies.results">
-      <ng-template ngbSlide>
-          <!-- <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/> -->
-        <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}">
-        <div class="carousel-caption">
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+<div class="carouselimages">
+    <ngb-carousel *ngIf="movies">
+        <div *ngFor="let result of this.movies.results">
+           <ng-template ngbSlide>
+               <!-- <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/> -->
+             <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}">
+             <div class="carousel-caption">
+               <h3>First slide label</h3>
+               <p></p>
+             </div>
+           </ng-template>
         </div>
-      </ng-template>
-   </div>
+      </ngb-carousel>
+</div>
+
     <!-- <ng-template ngbSlide> -->
         <!-- <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/> -->
       <!-- <img [src]="images[0]" alt="Random first slide">
@@ -75,5 +78,5 @@
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </div>
     </ng-template> -->
-  </ngb-carousel>
+  
 
