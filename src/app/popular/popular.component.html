@@ -9,7 +9,8 @@
       <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/>
    </li>
 </div> -->
-<div *ngFor="let result of this.movies.results" class="clr-col-lg-4 clr-col-12" id="cards">
+<div class="cards">
+    <div *ngFor="let result of this.movies.results" class="clr-col-lg-4 clr-col-12">
         <a href="..." class="card clickable">
             <div class="card-block">
                 <p class="card-text">
@@ -21,6 +22,8 @@
             </div>
         </a>
     </div>
+</div>
+
 
 
 
