@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +39,9 @@ import { HighratedComponent } from './highrated/highrated.component';
     HttpClientModule,
     ClarityModule,
     BrowserAnimationsModule,
-    SlideshowModule
+    SlideshowModule,
+    Ng2CarouselamosModule,
+    NgbModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
