@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  sidenav: boolean;
+  // sidenav: boolean;
  
-  showSideNavMenu (){
-    this.sidenav = !this.sidenav;
-  }
+  // showSideNavMenu (){
+  //   this.sidenav = !this.sidenav;
+  // }
 
  }

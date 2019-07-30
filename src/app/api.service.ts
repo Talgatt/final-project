@@ -18,5 +18,11 @@ export class ApiService {
     
   }
 
+  getPopular(){
+    const urlpop = 'https://api.themoviedb.org/3/movie/upcoming?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US';
+    console.log(urlpop);
+    return this._http.get(urlpop); 
+  }
+
 
 }

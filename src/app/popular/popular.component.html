@@ -1,1 +1,43 @@
 <p>popular works!</p>
+<!-- <p *ngFor=" let result of this.movies.results">Show Popular: {{result.title}}</p> -->
+
+<!-- <div *ngFor="let result of this.movies.results" class="popularmovie">
+   <li>
+       {{result.title}}
+   </li> 
+   <li>
+      <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/>
+   </li>
+</div> -->
+<div *ngFor="let result of this.movies.results" class="clr-col-lg-4 clr-col-12" id="cards">
+        <a href="..." class="card clickable">
+            <div class="card-block">
+                <p class="card-text">
+                    {{result.title}}   
+                </p>
+            </div>
+            <div class="card-img">
+                <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/>
+            </div>
+        </a>
+    </div>
+
+
+
+<!-- <div class="clr-col-lg-4 clr-col-12">
+    <a href="..." class="card clickable">
+        <div *ngFor="let result of this.movies.results" class="card-block">
+            <p  class="card-text">
+            {{result.title}}
+            </p>
+        </div>
+        <div *ngFor="let result of this.movies.results" class="card-img">
+            <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/>
+        </div>
+        <div class="card-block">
+            <p class="card-text">
+                ...
+            </p>
+        </div>
+    </a>
+</div> -->

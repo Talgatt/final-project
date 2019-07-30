@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  input;
+  movies: any = [];
+  sidenav: boolean;
 
-  constructor() { }
+  constructor(public _api: ApiService) { }
 
   ngOnInit() {
   }
+  onClick(){
+
+    this._api.getMovieList(this.input).subscribe(res => {
+      this.movies = res;
+      console.log(this.movies);
+    })
+  }
+  
+ 
+  showSideNavMenu (){
+    this.sidenav = !this.sidenav;
+  }
+
 
 }

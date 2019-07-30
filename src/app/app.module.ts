@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { SlideshowModule } from 'ng-simple-slideshow';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -13,6 +15,8 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FamilyComponent } from './family/family.component';
 import { HeaderComponent } from './header/header.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
+import { HighratedComponent } from './highrated/highrated.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,8 @@ import { HeaderComponent } from './header/header.component';
     PopularComponent,
     FamilyComponent,
     HeaderComponent,
+    UpcomingComponent,
+    HighratedComponent,
    
   ],
   imports: [
@@ -29,7 +35,8 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     HttpClientModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SlideshowModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

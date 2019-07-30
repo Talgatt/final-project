@@ -8,21 +8,21 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit {
 
-  input;
-  movies: any = [];
+  // input;
+  // movies: any = [];
   
   constructor(public _api: ApiService) { }
 
   ngOnInit() {
   }
 
-  onClick(){
+  // onClick(){
 
-    this._api.getMovieList(this.input).subscribe(res => {
-      this.movies = res;
-      console.log(this.movies);
-    })
-  }
+  //   this._api.getMovieList(this.input).subscribe(res => {
+  //     this.movies = res;
+  //     console.log(this.movies);
+  //   })
+  // }
 
  
 

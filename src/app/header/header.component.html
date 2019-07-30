@@ -1,1 +1,56 @@
-<p>header works!</p>
+<!-- <header class="header-6">
+    <div class="branding">
+        <a href="..." class="nav-link">
+            <button class="btn btn-sm btn-link"><clr-icon shape="bars"></clr-icon></button>
+            <span class="title">Movie Search</span>
+        </a>
+    </div>
+    <div></div>
+    <form class="search">
+        <label for="search_input">
+                input clrInput placeholder="My input" name="search" [(ngModel)]="_api.search"
+            <input [(ngModel)]="_api.search" id="search_input" type="text" placeholder="Search for keywords..." (keydown.enter)="onClick()">
+            <clr-icon shape="search" class="search"></clr-icon>
+        </label>
+    </form>
+    <div class="header-actions">
+        <a href="..." class="nav-link nav-icon">
+            <clr-icon shape="cog"></clr-icon>
+        </a>
+    </div>
+</header> -->
+
+
+<header>
+    <div class="buttonNav">
+        <button class="btn btn-sm btn-link" (click)="showSideNavMenu()"><clr-icon shape="bars"></clr-icon></button>
+        <span class="title">Movie Search</span>
+    </div>
+    <nav class="sidenav" *ngIf="sidenav==true">
+        <p><a routerLink="home">Search</a></p>
+        <p><a routerLink="popular">Popular</a></p>
+        <p><a routerLink="family">Family</a></p>
+    </nav>
+    <div class="searchingInput">
+        <form clrForm>
+            <input [(ngModel)]="_api.search" class="inputs" clrInput placeholder="My input" name="input" [(ngModel)]="input" />
+            <div id="searchins">
+                <button class="btn btn-sm btn-link" (click)="onClick()"><clr-icon shape="search"></clr-icon></button>
+            </div>
+            <div class="searchResults">
+            <li *ngFor="let result of this.movies.results">
+                <p><strong>{{result.title}}</strong></p>
+                <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}">
+            </li>
+            </div>
+        </form>
+    </div>
+    <div class="linksNav">
+        <p><a routerLink="upcoming">Up coming</a></p>
+
+        <p><a routerLink="popular">Most Popular</a></p>
+
+        <p><a routerLink="highrated">Top Rated</a></p>
+
+    </div>
+</header>
