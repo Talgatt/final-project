@@ -15,8 +15,68 @@
     <p><a routerLink="family">Family</a></p>
   </nav>-->
 
+<!-- <div id="container">
+  <div ng2-carouselamos class="slides-wrapper"
+    [items]="items"
+    [width]="900"
+    [$prev]="prev"
+    [$next]="next"
+    [$item]="item">
+     https://www.youtube.com/watch?v=fkmS9Pq7Sww 
+
+  </div>
+
+  <ng-template #prev>
+    <img 
+
+
+  </ng-template>
+</div>
+
 <app-header></app-header>
 
 
 <router-outlet></router-outlet>
-<app-popular></app-popular>
+<app-popular></app-popular> -->
+<app-header></app-header>
+
+<router-outlet></router-outlet>
+<div class="carouselimages">
+    <ngb-carousel *ngIf="movies">
+        <div *ngFor="let result of this.movies.results">
+           <ng-template ngbSlide>
+               <!-- <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/> -->
+             <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}">
+             <div class="carousel-caption">
+               <h3>First slide label</h3>
+               <p></p>
+             </div>
+           </ng-template>
+        </div>
+      </ngb-carousel>
+</div>
+
+    <!-- <ng-template ngbSlide> -->
+        <!-- <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}"/> -->
+      <!-- <img [src]="images[0]" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </ng-template> -->
+  
+

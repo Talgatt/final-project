@@ -1,0 +1,16 @@
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    height: 100px;
+    width: auto;
+}
+img{
+    height: 500px;
+    width: 500px;
+}
+.clr-col-lg-4{
+    height: auto;
+    width: 500px;
+}

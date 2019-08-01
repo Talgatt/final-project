@@ -13,3 +13,18 @@
     justify-content: space-evenly;
     
 }
+.carousel-control-prev:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+.carousel-control-next:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+img{
+    width: 600px;
+    height: 600px;
+}
+.carouselimages{
+    background-color:#25333D;
+    display: flex;
+    justify-content: center;
+}
