@@ -20,6 +20,7 @@ import { FamilyComponent } from './family/family.component';
 import { HeaderComponent } from './header/header.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { HighratedComponent } from './highrated/highrated.component';
+import { GenresComponent } from './genres/genres.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HighratedComponent } from './highrated/highrated.component';
     HeaderComponent,
     UpcomingComponent,
     HighratedComponent,
+    GenresComponent,
    
   ],
   imports: [

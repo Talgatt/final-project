@@ -1,0 +1,13 @@
+
+
+
+<div class="buttonNav">
+    <button class="btn btn-sm btn-link" (click)="showSideNavMenu()"><clr-icon shape="bars"></clr-icon></button>
+    <span class="title">Movie Search</span>
+    
+    <nav class="sidenav" *ngFor="let movie of movies; let i = index">
+        <p><a routerLink="home">{{movie.name}}</a></p>
+    </nav>
+</div>
+
+

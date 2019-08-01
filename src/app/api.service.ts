@@ -24,5 +24,9 @@ export class ApiService {
     return this._http.get(urlpop); 
   }
 
-
+  
+  getMoviesByGenre() {
+  
+    return this._http.get('https://api.themoviedb.org/3/genre/movie/list?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US');     
+  }
 }

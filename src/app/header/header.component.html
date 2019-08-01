@@ -22,15 +22,9 @@
 
 
 <header>
-    <div class="buttonNav">
-        <button class="btn btn-sm btn-link" (click)="showSideNavMenu()"><clr-icon shape="bars"></clr-icon></button>
-        <span class="title">Movie Search</span>
-    </div>
-    <nav class="sidenav" *ngIf="sidenav==true">
-        <p><a routerLink="home">Search</a></p>
-        <p><a routerLink="popular">Popular</a></p>
-        <p><a routerLink="family">Family</a></p>
-    </nav>
+    
+    <app-genres></app-genres>
+    
     <div class="searchingInput">
         <form clrForm>
             <input [(ngModel)]="_api.search" class="inputs" clrInput placeholder="My input" name="input" [(ngModel)]="input" />
