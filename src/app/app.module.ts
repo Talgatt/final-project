@@ -21,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { HighratedComponent } from './highrated/highrated.component';
 import { GenresComponent } from './genres/genres.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { GenresComponent } from './genres/genres.component';
     UpcomingComponent,
     HighratedComponent,
     GenresComponent,
+    MovieCardComponent,
    
   ],
   imports: [

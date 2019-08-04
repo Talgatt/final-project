@@ -8,16 +8,17 @@ import { ApiService } from '../api.service';
 })
 export class UpcomingComponent implements OnInit {
 
-  movies;
+  movies: Array<Object>;
 
   constructor(private _api: ApiService) { 
-    this._api.getUpcoming().subscribe(res =>{
-      this.movies = res;
-      console.log(this.movies);
-    });
+  
   }
 
   ngOnInit() {
+    this._api.getUpcoming().subscribe((res: any) =>{
+      this.movies = res.results;
+      console.log(this.movies);
+    });
   }
 
 }

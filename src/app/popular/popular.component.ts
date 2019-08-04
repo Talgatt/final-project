@@ -8,9 +8,11 @@ import { ApiService } from '../api.service';
 })
 export class PopularComponent implements OnInit {
 
+  movies: Array<Object>;
 
+  constructor(private _api: ApiService){
 
-
+  }
   // onClick(){
 
   //   this._api.getMovieList(this.input).subscribe(res => {
@@ -22,7 +24,10 @@ export class PopularComponent implements OnInit {
   
 
   ngOnInit() {
-
+    this._api.getPopular().subscribe((res: any) => {
+      this.movies = res;
+      console.log(this.movies);
+    })
   }
 
 }
